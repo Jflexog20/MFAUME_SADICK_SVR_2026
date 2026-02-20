@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Notice</title>
+    <title>Billing Service Notice</title>
     <style>
-        /* Modern reset and Heroku-inspired background */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
             background-color: #f1f1f6;
             display: flex;
             justify-content: center;
@@ -16,7 +15,6 @@
             margin: 0;
         }
 
-        /* The white container card */
         .box {
             background: #ffffff;
             padding: 40px;
@@ -25,54 +23,84 @@
             text-align: center;
             max-width: 450px;
             width: 90%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
-        /* Heroku Purple for the Heading */
         h1 {
-            color: #430098;
+            color: #430098; /* Heroku Purple */
             font-size: 22px;
-            margin-bottom: 15px;
-            font-weight: 600;
+            margin-bottom: 10px;
         }
 
         p {
             color: #58517e;
-            line-height: 1.6;
             font-size: 15px;
-            margin-bottom: 25px;
+            line-height: 1.5;
         }
 
-        .date {
-            color: #430098;
+        .alert-text {
+            color: #d12d2d;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .billing-access {
+            background-color: #f8f9ff;
+            border: 1px dashed #79589f;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .phone-number {
+            display: block;
             font-weight: bold;
+            font-size: 18px;
+            color: #430098;
+            margin-top: 5px;
         }
 
-        /* Styling the button to match "Create New App" */
         .btn {
-            background-color: #79589f;
+            background-color: #79589f; /* Button color from screenshot */
             color: white;
-            padding: 12px 24px;
+            padding: 14px 28px;
             text-decoration: none;
             border-radius: 4px;
-            font-weight: 500;
+            font-weight: 600;
             display: inline-block;
             transition: background-color 0.2s;
+            margin-top: 10px;
         }
 
         .btn:hover {
             background-color: #634683;
         }
+
+        .footer-note {
+            font-size: 12px;
+            color: #9b99af;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="box">
-        <h1>Account Notice</h1>
-        <p>
-            Your service is scheduled for suspension on <br>
-            <span class="date">February 20, 2026 at 00:00</span> <br>
-            due to pending payment.
+        <h1>Payment Required</h1>
+        <p class="alert-text">Suspension Scheduled: 20/02/2026</p>
+        
+        <p>To maintain your service, please complete your payment via our authorized billing terminal:</p>
+        
+        <div class="billing-access">
+            Authorized Billing Number:
+            <span class="phone-number">+255 610 274 920</span>
+        </div>
+
+        <a href="tel:+255610274920" class="btn">Proceed to Payment</a>
+
+        <p class="footer-note">
+            Note: This system only recognizes payments made through the number listed above.
         </p>
-        <a href="#" class="btn">Update Billing Info</a>
     </div>
 </body>
 </html>
