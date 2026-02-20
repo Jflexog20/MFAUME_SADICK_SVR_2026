@@ -2,33 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service Notice</title>
     <style>
+        /* Modern reset and Heroku-inspired background */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f1f1f6;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
         }
+
+        /* The white container card */
         .box {
             background: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 6px;
+            border: 1px solid #d9d9de;
             text-align: center;
-            max-width: 500px;
+            max-width: 450px;
+            width: 90%;
         }
+
+        /* Heroku Purple for the Heading */
         h1 {
-            color: #dc3545;
+            color: #430098;
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
+
         p {
-            color: #333;
+            color: #58517e;
+            line-height: 1.6;
+            font-size: 15px;
+            margin-bottom: 25px;
         }
+
         .date {
+            color: #430098;
             font-weight: bold;
+        }
+
+        /* Styling the button to match "Create New App" */
+        .btn {
+            background-color: #79589f;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            display: inline-block;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #634683;
         }
     </style>
 </head>
@@ -36,13 +68,11 @@
     <div class="box">
         <h1>Account Notice</h1>
         <p>
-            Your service is scheduled for suspension on 
-            <span class="date">20/02/2026 at 00:00</span> 
+            Your service is scheduled for suspension on <br>
+            <span class="date">February 20, 2026 at 00:00</span> <br>
             due to pending payment.
         </p>
-        <p>
-            Please contact support or update your billing information to avoid interruption.
-        </p>
+        <a href="#" class="btn">Update Billing Info</a>
     </div>
 </body>
 </html>
