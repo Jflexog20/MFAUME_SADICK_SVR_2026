@@ -13,9 +13,8 @@
             color: #3f3f44;
         }
 
-        /* Heroku-style Purple Warning Banner */
         .urgent-banner {
-            background-color: #d12d2d; /* Changed to red because date passed */
+            background-color: #d12d2d;
             color: #ffffff;
             text-align: center;
             padding: 14px 10px;
@@ -91,7 +90,7 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: 8px;
-            font-size: 15px;
+            font-size: 14px;
         }
 
         .total-row {
@@ -127,10 +126,6 @@
             margin-top: 10px;
         }
 
-        .btn-pay:hover {
-            background-color: #634683;
-        }
-
         .disclaimer {
             font-size: 12px;
             color: #9b99af;
@@ -142,7 +137,7 @@
 <body>
 
     <div class="urgent-banner">
-        <strong>OVERDUE:</strong> Account was scheduled for suspension on 20/02/2026.
+        <strong>OVERDUE:</strong> Final suspension notice for account services.
     </div>
 
     <div class="header">
@@ -152,22 +147,22 @@
     <div class="container">
         <div class="card">
             <div class="status-badge">PAST DUE</div>
-            <h2>Final Payment Notice</h2>
+            <h2>Service Payment Required</h2>
             
-            <p>Your deadline was:</p>
+            <p>The original deadline was:</p>
             <span class="date-highlight">February 20, 2026</span>
 
             <div class="billing-terminal">
                 <div class="price-row">
-                    <span>Original Balance:</span>
+                    <span>Previous Balance:</span>
                     <span>55,000 TSH</span>
                 </div>
                 <div class="price-row" style="color: #d12d2d;">
-                    <span>Late Penalty (Debt):</span>
+                    <span>Ongoing Hosting Usage:</span>
                     <span>+20,000 TSH</span>
                 </div>
                 <div class="total-row">
-                    <span>TOTAL DUE:</span>
+                    <span>TOTAL DEBT:</span>
                     <span>75,000 TSH</span>
                 </div>
 
@@ -180,7 +175,7 @@
             <a href="tel:+255610274920" class="btn-pay">Pay 75,000 TSH Now</a>
 
             <div class="disclaimer">
-                <strong>Note:</strong> Since the date has passed, the balance has increased. Payment must be finalized immediately to clear the suspension flag.
+                <strong>Explanation:</strong> The balance has increased from 55,000 TSH to 75,000 TSH due to <strong>ongoing hosting resource consumption</strong> while the account remains active.
             </div>
         </div>
     </div>
